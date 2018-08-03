@@ -49,11 +49,9 @@ class Work():
             for key in self.workShopList[i]:
                 with open('{}/WORKSHOP#{}.csv'.format(self.outupDirectory,i+1),'a+') as fileAtIndex:
                     for j in a[a['#'] == key].values:
-                        final+=1
                         for k in j:
                             fileAtIndex.write(str(k))
                             fileAtIndex.write(', ')
                         fileAtIndex.write('\n')
-        print(final)
 if __name__ == '__main__':
     Work(9,20,['#','A1','A2','A3','A4','A5','A6','A7','A8','A9'],'/Users/nick/Downloads/work1.csv','/Users/nick/')
